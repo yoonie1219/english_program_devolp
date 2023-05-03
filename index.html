@@ -1,0 +1,38 @@
+<!-- 위 코드는 영어 단어장을 구현하는 HTML 파일입니다.
+    words.js 파일로부터 단어와 뜻 정보를 가져와서 표로 출력하며,
+    퀴즈 시작하기 버튼을 클릭하면 quiz.html 파일로 이동합니다. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>영어 단어장</title>
+    <meta charset="UTF-8" />
+    <!-- CSS 파일을 연결  -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body class="container">
+    <h1>영어 단어장</h1>
+    <!-- 단어와 뜻을 표로 출력 -->
+    <table>
+      <tr>
+        <th>단어</th>
+        <th>뜻</th>
+      </tr>
+      <!-- 단어와 뜻 정보를 JavaScript 파일로부터 가져와서 출력 -->
+      <script type="text/javascript" src="words.js"></script>
+      <script type="text/javascript">
+        for (var i = 0; i < words.length; i++) {
+          document.write(
+            "<tr><td class='word'>" +
+              words[i].word +
+              "</td><td class='meaning'>" +
+              words[i].meaning +
+              "</td></tr>"
+          );
+        }
+      </script>
+    </table>
+    <p>영어를 다 외운 후 퀴즈 시작하기 버튼을 눌러주세요.</p>
+    <!-- 퀴즈 시작 버튼 -->
+    <a class="quiz" href="quiz.html">퀴즈 시작하기</a>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+영어 퀴즈를 위한 HTML 파일입니다.
+-->
+<html>
+  <head>
+    <title>영어 퀴즈</title>
+    <meta charset="UTF-8" />
+    <!-- CSS 파일을 연결합니다. -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body class="container">
+    <h1>영어 퀴즈</h1>
+    <!-- 문제와 정답 입력을 위한 폼을 생성합니다. -->
+    <form>
+      <p>다음 영어 단어의 뜻은 무엇인가요?</p>
+      <div>
+        <!-- 문제로 출제될 단어를 출력할 공간입니다. -->
+        <h2 id="word"></h2>
+        <!-- 정답 입력란과 정답 확인 버튼을 생성합니다. -->
+        <label for="answer">뜻: </label>
+        <input type="text" id="answer" name="answer" />
+        <br />
+        <button type="button" onclick="checkAnswer()">정답확인하기</button>
+        <!-- 정답 확인 결과를 출력할 공간입니다. -->
+        <p id="result"></p>
+      </div>
+    </form>
+    <!-- JavaScript 파일을 연결합니다. -->
+    <script type="text/javascript" src="words.js"></script>
+    <script type="text/javascript" src="quiz.js"></script>
+  </body>
+</html>
